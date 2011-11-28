@@ -1,0 +1,10 @@
+{
+  "name": "Open Selected Issue in background tab",
+  "version": 1.0,
+  "background_page": "background.html",
+  "content_scripts": "crbug_open.js",
+  "permissions": [
+    "tabs",
+    "http://code.google.com/p/chromium/issues/list*"
+  ]
+}

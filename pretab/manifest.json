@@ -4,6 +4,8 @@
   "background_page": "background.html",
   "permissions": [
     "tabs",
-    "experimental"
+    "webRequest",
+    "http://*/*",
+    "https://*/*"
   ]
 }

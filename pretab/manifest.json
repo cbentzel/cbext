@@ -1,6 +1,6 @@
 {
-  "name": "Prerender impact on tabs API"
-  "version": 1.0,
+  "name": "Prerender impact on tabs API",
+  "version": "1.0",
   "background_page": "background.html",
   "permissions": [
     "tabs",

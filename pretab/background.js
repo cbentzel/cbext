@@ -29,9 +29,39 @@ chrome.tabs.onCreated.addListener(
     }
 );
 
-chrome.tabs.onRemoved.addListener(
+
+chrome.tabs.onAttached.addListener(
     function (tabId, attachInfo) {
+      getAndShowTab("attached", tabId);
+    }
+);
+
+chrome.tabs.onDetached.addListener(
+    function (tabId, detachInfo) {
+      getAndShowTab("detached", tabId);
+    }
+);
+
+chrome.tabs.onMoved.addListener(
+    function (tabId, movedInfo) {
+      getAndShowTab("moved", tabId);
+    }
+);
+
+chrome.tabs.onRemoved.addListener(
+    function (tabId, removeInfo) {
       getAndShowTab("removed", tabId);
     }
 );
 
+chrome.tabs.onSelectionChanged.addListener(
+    function (tabId, selectInfo) {
+      getAndShowTab("selected", tabId);
+    }
+);
+
+chrome.tabs.onUpdated.addListener(
+    function (tabId, updateInfo) {
+      getAndShowTab("update", tabId);
+    }
+);
